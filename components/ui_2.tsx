@@ -1,5 +1,6 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {    View , Button, StyleSheet, Alert, TouchableOpacity, Text, FlatList } from 'react-native';
+import {Picker} from '@react-native-picker/picker';
 
 const data = [
     {aa: "상어"},
@@ -10,6 +11,9 @@ const data = [
 
 
 function ui_2(props) {
+
+    const [ppVal, setPpVal] = useState('html')
+
     return (
         <View style={sts.cont}>
             <Button title='눌러바'
@@ -31,6 +35,21 @@ function ui_2(props) {
                     <Text style={sts.item}>{item.aa}</Text>
                 )}
             />
+
+
+
+            <Picker style={sts.picker} selectedValue={ppVal}
+                onValueChange={(vv)=> {
+                    console.log("picker 선택 : ",vv)
+                    setPpVal(vv)
+                }}
+            >
+                <Picker.Item label='알엔' value="rn"  />
+                <Picker.Item label='퍼블리셔' value="html"  />
+                <Picker.Item label='백엔드' value="express"  />
+                <Picker.Item label='프론트' value="react"  />
+
+            </Picker>
         </View>
     );
 }
@@ -58,7 +77,14 @@ const sts = StyleSheet.create({
         fontSize : 20,
         borderBottomWidth : 1,
         borderBottomColor : "#ccc"
+    },
+    picker:{
+        position:'absolute',
+        top: 300,
+        width: 200,
+        height:100,
     }
+    
 
 })
 
