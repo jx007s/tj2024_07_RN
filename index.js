@@ -11,6 +11,8 @@ import UI_3 from './components/ui_3';
 import UI_4 from './components/ui_4';
 import UI_5 from './components/ui_5';
 import UI_6 from './components/ui_6';
+import UI_7 from './components/ui_7';
+import UI_8 from './components/ui_8';
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => UI_6);
+AppRegistry.registerComponent(appName, () => UI_8);
