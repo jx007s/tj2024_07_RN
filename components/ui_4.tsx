@@ -2,32 +2,48 @@ import React, { useEffect, useState } from 'react';
 import {SafeAreaView, Switch, View } from 'react-native';
 import {Bar} from 'react-native-progress'
 
+var timer = null; 
 function ui_4(props) {
 
     const [myPro, setMyPro] = useState(0)
 
 
-    useEffect(()=>{
-        console.log("최초 실행시 작업하지");
+    // useEffect(()=>{
+    //     console.log("최초 실행시 작업하지");
 
 
-        const timer = setInterval(()=>{
-            setMyPro((ppp) => {
-                if(ppp>=1){
-                    clearInterval(timer)
-                    return 1
-                }
-                return ppp + 0.05
-            })
+    //     const timer = setInterval(()=>{
+    //         setMyPro((ppp) => {
+    //             if(ppp>=1){
+    //                 clearInterval(timer)
+    //                 return 1
+    //             }
+    //             return ppp + 0.05
+    //         })
 
-        },1000)
+    //     },1000)
 
-    },[])
+    // },[])
 
 
     const [isToggle, setToggle] = useState(false);
 
     function toggleSwitch(){
+        if(!isToggle){
+            timer = setInterval(()=>{
+                setMyPro((ppp) => {
+                    if(ppp>=1){
+                        clearInterval(timer)
+                        return 1
+                    }
+                    return ppp + 0.05
+                })
+    
+            },1000)
+        }else{
+            clearInterval(timer)
+        }
+       
 
         // previousState  : 기존의 값
         setToggle((previousState)=>!previousState)
