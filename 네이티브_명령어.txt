@@ -55,5 +55,13 @@ npm i react-native-web-swiper
 
 
 게시판
-npm i @react-navigation/native @react-navigation/stack react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context
+npm i @react-navigation/native @react-navigation/stack react-native-gesture-handler  react-native-screens react-native-safe-area-context
 
+게시판 에러난 사람만 ... =========================================
+
+
+프로젝트 > npm i
+프로젝트 \ 안드로이드 > app > .cxx 제거
+프로젝트 \ 안드로이드 > .\gradlew clean
+
+프로젝트 > npm start
