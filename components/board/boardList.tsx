@@ -18,11 +18,15 @@ function boardList({navigation}) {
 
     const detailGo = ( data )=> {
         
-         navigation.navigate('BoardDetail',{data, deleteReg});
+         navigation.navigate('BoardDetail',{data, deleteReg, listModifyReg});
      }
 
      const deleteReg = (delId)=>{
         setDatas((prevDatas)=> prevDatas.filter((item)=> item.id != delId))
+     }
+
+     const listModifyReg = (newItem)=>{
+        setDatas((prevDatas)=> prevDatas.map((item)=> item.id == newItem.id ? newItem : item ))
      }
 
     return (

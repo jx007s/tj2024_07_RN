@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Text, View } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 
-function boardList({ route  , navigation}) {
+function boardWrite({ route  , navigation}) {
 
     const {setDatas, nowId, setNowId} = route.params
 
@@ -33,4 +33,4 @@ function boardList({ route  , navigation}) {
     );
 }
 
-export default boardList;
+export default boardWrite;

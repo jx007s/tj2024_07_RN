@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Alert, Button, Text, View } from 'react-native';
 
-function boardList({ route  , navigation}) {
+function boardDetail({ route  , navigation}) {
 
-    const {data, deleteReg} = route.params;
+    const {data, deleteReg, listModifyReg} = route.params;
+
+    const [detailData, setDetailData] = useState(data);
 
     const delGo = ()=>{
         Alert.alert('글삭제','진짜로 삭제?', [
@@ -25,14 +27,19 @@ function boardList({ route  , navigation}) {
     }
 
     const modifyGo = ()=>{
-        navigation.navigate('BoardModify',{data})
+        navigation.navigate('BoardModify',{data, modifyReg})
+    }
+
+    const modifyReg = (updateItem)=>{
+        setDetailData(updateItem)
+        listModifyReg(updateItem)
     }
 
     return (
         <View>
             <Text>상세이지롱</Text>
-            <Text>{data.title}</Text>
-            <Text>{data.content}</Text>
+            <Text>{detailData.title}</Text>
+            <Text>{detailData.content}</Text>
 
             <Button title="수정" onPress={modifyGo} />
             <Button title="삭제" onPress={delGo}/>
@@ -40,4 +47,4 @@ function boardList({ route  , navigation}) {
     );
 }
 
-export default boardList;
+export default boardDetail;
