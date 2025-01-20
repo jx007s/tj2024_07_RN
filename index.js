@@ -15,6 +15,7 @@ import {AppRegistry} from 'react-native';
 // import UI_8 from './components/ui_8';
 //import Board from './components/board/boardNavi';
 import fb from './components/fb';
+import map from './components/map';
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => fb);
+AppRegistry.registerComponent(appName, () => map);
