@@ -68,4 +68,9 @@ npm i @react-navigation/native @react-navigation/stack react-native-gesture-hand
 
 ========================================
 
-프로젝트 > npm i react-native-safe-area-context
+firebase 
+
+npm install @react-native-firebase/app @react-native-firebase/database
+
+
+
