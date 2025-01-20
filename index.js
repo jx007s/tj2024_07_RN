@@ -13,7 +13,8 @@ import {AppRegistry} from 'react-native';
 // import UI_6 from './components/ui_6';
 // import UI_7 from './components/ui_7';
 // import UI_8 from './components/ui_8';
-import Board from './components/board/boardNavi';
+//import Board from './components/board/boardNavi';
+import fb from './components/fb';
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => Board);
+AppRegistry.registerComponent(appName, () => fb);
