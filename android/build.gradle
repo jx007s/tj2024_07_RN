@@ -15,9 +15,12 @@ buildscript {
         classpath("com.android.tools.build:gradle")
         classpath("com.facebook.react:react-native-gradle-plugin")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+<<<<<<< HEAD
         classpath("com.google.gms:google-services:4.4.2")
 //id 'com.google.gms.google-services' version '4.4.2' apply false
 
+=======
+>>>>>>> parent of 13edca1 (01_20_firebase)
     }
 }
 

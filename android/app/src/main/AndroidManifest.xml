@@ -16,7 +16,7 @@
 
       <meta-data 
           android:name="com.google.android.geo.API_KEY"
-          android:value="당신의 키로 올리세요"
+          android:value="AIzaSyDoP8Ts46tVonjSWiTtxJ3AOpb52OMC_QQ"
        />
 
 

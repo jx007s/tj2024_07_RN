@@ -68,6 +68,7 @@ npm i @react-navigation/native @react-navigation/stack react-native-gesture-hand
 
 ========================================
 
+<<<<<<< HEAD
 firebase 
 
 npm install @react-native-firebase/app @react-native-firebase/database
@@ -79,3 +80,6 @@ npm install react-native-maps @react-native-community/geolocation
 
 camera
 npm install react-native-image-picker react-native-permissions
+=======
+프로젝트 > npm i react-native-safe-area-context
+>>>>>>> parent of 13edca1 (01_20_firebase)
